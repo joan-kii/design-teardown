@@ -13,6 +13,15 @@ html {
   font-weight: 700;
 }
 
+article,
+div {
+  border-radius: 10px;
+}
+
+.gray-1 {
+  background-color: #495057;
+}
+
 .gray-3 {
   background-color: #ced4da;
 }
@@ -66,7 +75,41 @@ html {
 
 .second-navbar {
   position: relative;
-  top: 107px;
+  top: 106px;
+  padding: 1em ;
+  padding-right: 4em;
   width: 100%;
   height: 55px;
+  font-size: .8rem;
+}
+
+/* Entries */
+
+.post {
+  position: relative;
+  top: 180px;
+  left: 120px;
+  margin-bottom: 3rem;
+  padding: 3em;
+  width: 820px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.post h3,
+.post p {
+  text-align: center;
+}
+
+.post h3 {
+  font-size: 1.2rem;
+}
+
+.post p {
+  margin-top: 5em;
+  font-family: "Playfair Display", serif;
+  font-size: .8rem;
+  font-weight: 300;
 }
