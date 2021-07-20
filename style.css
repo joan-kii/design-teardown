@@ -2,7 +2,7 @@
 
 /* * {
     outline: 2px solid red;
-  }  */
+  } */ 
 
 
 /* Global */
@@ -13,21 +13,35 @@ html {
   font-weight: 700;
 }
 
+body,
+main {
+  width: 100%;
+}
+ 
 article,
-div {
+div, 
+section {
   border-radius: 10px;
 }
 
 .gray-1 {
   background-color: #495057;
+  color: #fff;
+}
+
+.gray-2 {
+  background-color: #6c757d;
+  color: #fff;
 }
 
 .gray-3 {
   background-color: #ced4da;
+  color: #333;
 }
 
 .gray-4 {
   background-color: #e9ecef;
+  color: #333;
 }
 
 /* Header */
@@ -71,11 +85,18 @@ div {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 1300px){
+  .search input {
+    display: none;
+  }
+}
+
 /* Second Navbar*/
 
 .second-navbar {
   position: relative;
   top: 106px;
+  width: 100%;
   padding: 1em ;
   padding-right: 4em;
   width: 100%;
@@ -83,33 +104,80 @@ div {
   font-size: .8rem;
 }
 
-/* Entries */
-
-.post {
-  position: relative;
-  top: 180px;
-  left: 120px;
-  margin-bottom: 3rem;
-  padding: 3em;
-  width: 820px;
-  min-height: 150px;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
+@media screen and (max-width: 1000px){
+  .second-navbar {
+    display: none;
+  }
 }
 
-.post h3,
-.post p {
+/* Entries */
+
+.main-section {
+  position: relative;
+  margin-top: 6em;
+  padding: 0 4em;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 400px 150px 150px;
+  column-gap: 6em;
+  row-gap: 2em;
+  grid-template-areas: "post-1  subscribe"
+                       "post-2  subscribe"
+                       "post-3  subscribe";
+}
+
+.post,
+.subscribe {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.post h3 {
+.first-post {
+  grid-area: post-1;
+}
+
+.second-post {
+  grid-area: post-2;
+}
+
+.third-post {
+  grid-area: post-3;
+}
+
+.subscribe {
+  grid-area: subscribe;
+  padding-top: 7em;
+}
+
+.subscribe input {
+  margin-top: 1em;
+  width: 200px;
+}
+
+.post h3,
+.subscribe h3 {
   font-size: 1.2rem;
 }
 
-.post p {
+.post p,
+.subscribe p {
   margin-top: 5em;
   font-family: "Playfair Display", serif;
   font-size: .8rem;
   font-weight: 300;
+}
+
+/* Explore */
+.explore {
+  margin: 2em 3em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.explore-item {
+  width: 440px;
+  height: 480px;
 }
