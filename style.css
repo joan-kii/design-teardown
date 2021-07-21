@@ -34,6 +34,13 @@ button {
   cursor: pointer;
 }
 
+footer {
+  margin-top: 2em;
+  padding: 3em 8em;
+  text-align: center;
+  line-height: 1.5em;
+}
+
 .gray-1 {
   background-color: #495057;
   color: #fff;
@@ -139,7 +146,8 @@ button {
 
 .post,
 .subscribe,
-.explore-item {
+.explore-item,
+.workshops {
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -212,7 +220,8 @@ button {
 
 /* Latest Posts */
 
-.latest-posts-grid {
+.latest-posts-grid,
+.community-posts-grid {
   position: relative;
   margin-top: 6em;
   padding: 0 4em;
@@ -242,12 +251,61 @@ button {
 /* Smashing Family */
 
 .family {
-  position: relative;
+  margin: 1em auto;
+  width: 80%;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .family-item {
-  margin: 2em;
+  margin: 0 1em;
+  padding: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.family-item h3,
+.workshops h3 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.family-item p,
+.workshops p {
+  margin-top:.5em;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: lighter;
+  font-size: .7rem;
+}
+
+.family-item button {
+  padding: .5em;
+  font-size: .8rem;
+}
+
+/* Workshops */
+
+.workshops {
+  margin-bottom: 2em;
+  width: 100%;
+  align-items: center;
+}
+
+/* Community Posts */
+
+.community-posts-grid {
+  margin-top: 2em;
+  grid-template-rows: repeat(3, 16em);
+}
+
+@media screen and (max-width: 1450px){
+  .community-posts-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
