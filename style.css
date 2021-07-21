@@ -24,6 +24,16 @@ section {
   border-radius: 10px;
 }
 
+button {
+  margin-top: 2em;
+  padding: .75em 1em;
+  font-family: "Comic Neue", sans-serif;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .gray-1 {
   background-color: #495057;
   color: #fff;
@@ -128,7 +138,8 @@ section {
 }
 
 .post,
-.subscribe {
+.subscribe,
+.explore-item {
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -147,9 +158,12 @@ section {
   grid-area: post-3;
 }
 
-.subscribe {
-  grid-area: subscribe;
+.subscribe-item {
   padding-top: 7em;
+}
+
+.subscribe-item {
+  grid-area: subscribe;
 }
 
 .subscribe input {
@@ -171,13 +185,69 @@ section {
 }
 
 /* Explore */
+
 .explore {
   margin: 2em 3em;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .explore-item {
+  margin-top: .5em;
   width: 440px;
   height: 480px;
+}
+
+.explore-item h3 {
+  font-size: 1.2rem;
+}
+
+.explore-item p{
+  margin-top: 5em;
+  font-family: "Playfair Display", serif;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+/* Latest Posts */
+
+.latest-posts-grid {
+  position: relative;
+  margin-top: 6em;
+  padding: 0 4em;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 16em);
+  column-gap: auto;
+  row-gap: 2em;
+}
+
+.last-post {
+  width: 25em;
+}
+
+.second-column-post {
+  justify-self: end;
+}
+
+@media screen and (max-width: 1450px){
+  .latest-posts-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* Smashing Family */
+
+.family {
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.family-item {
+  margin: 2em;
 }
