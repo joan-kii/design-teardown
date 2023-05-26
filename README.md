@@ -1,5 +1,7 @@
-# design-teardown
+## [Live Demo](https://joan-kii.github.io/design-teardown)
 
-Grayscale heat map of Smashing Magazine website as a part of The Odin Project.
+## The Odin Project Exercise grayscale heat map of Smashing Magazine website.
 
-[Demo](https://joan-kii.github.io/design-teardown).
+### Built with
+ - HTML
+ - CSS
